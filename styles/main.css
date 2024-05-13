@@ -1,0 +1,31 @@
+.pageHeader {
+    text-align: center;
+}
+
+.list {
+    display: flex;
+    flex-direction: row; /* Arrange children horizontally */
+    flex-wrap: wrap;    /* Allow wrapping to the next line */
+    justify-content: space-evenly;
+}
+
+/* Center the last line by setting the first item on the last line to have margin auto */
+.list .shop:nth-last-child(2):nth-child(odd) {
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.list .shop:last-child {
+    margin-right: auto;
+}
+
+
+.shop {
+    flex-basis: 25%; /* Adjust this value based on how many items per row you desire */
+    flex-grow: 0; /* Prevent the items from growing beyond the flex-basis */
+    flex-shrink: 0; /* Prevent the items from shrinking below the flex-basis */
+    border: 1px solid black;
+    padding: 1em;
+    margin: 0.5em;
+    text-align: center;
+}
